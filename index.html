@@ -1,0 +1,61 @@
+<!-- TODO1: Crie um script com switch-case que atribua uma avaliacao da compra -->
+<!-- TODO2: Crie um HTML que permita selecionar uma sigla. A seguir, crie um script com switch-case 
+	que exiba o significado de uma sigla informada pelo usuários.
+	Ex.: HTML -> Hypertext Markup Language
+		CSS -> Cascading Style Sheet
+		XML -> eXtended Markup Language
+-->
+
+<!DOCTYPE html>
+<html lang="bzs">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Comércio Eletrônico</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+
+	<script src="js/scripts.js"></script>
+	<script src="js/decimal.js"></script>
+
+</head>
+
+<body>
+	
+	<label id="rotuloAvaliacao" class="estiloAvaliacao">Avaliação da Compra</label>
+
+	<br>
+
+	<!-- <label id="rotuloAvaliacao">Avaliação da Compra</label>
+	-->
+
+	<select id="notas" name="notasJS" onchange="avaliarCompra()">
+		<option value="0">0</option>
+		<option value="5">5</option>
+		<option value="10">10</option>
+	</select>
+
+	<!-- TODO2 -->
+	<br>
+	<br>
+	<label id="rotuloSigla" class="estiloAvaliacao">Sigla...</label>
+	<select id="siglas" name="siglasJS" onchange="avaliarSigla()">
+		<option value="HTML">HTML</option>
+		<option value="CSS">CSS</option>
+		<option value="XML">XML</option>
+	</select>
+
+	<figure>
+		<img id='carrinho' src='img/vendas.png' width='100' height='50' alt='vendas'>
+		<figcaption>
+			<p>Comércio Eletrônico.</p>
+		</figcaption>
+	</figure>
+
+	<!-- TODO1 -->
+	<button onclick="comprar()">Efetuar compra</button>
+
+</body>
+
+</html>
